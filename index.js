@@ -113,10 +113,10 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   window.requestAnimationFrame(function () {
-    var rightNumbers = DODGER.style.right.replace('px', '') //replaces string
-    var right = parseInt(rightNumbers, 10) //converts string to integer radix 10
-    if (right < 360) {
-      DODGER.style.right = `${right+4}px`
+    var leftNumbers = DODGER.style.left.replace('px', '') //replaces string
+    var left = parseInt(leftNumbers, 10) //converts string to integer radix 10
+    if (left < GAME_WIDTH) {
+      DODGER.style.left=`${left+4}px`
     }
     
   });
